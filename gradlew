@@ -6,12 +6,11 @@
 ##
 ##############################################################################
 
- Attempt to set APP_HOME
- Resolve links: $0 may be a link
-PRG="$0"ve symlinks.
- shellcheck disable=SC1057
- while [ -h "$PRG" ] ;
-# Need this for relatido
+# Attempt to set APP_HOME
+# Resolve links: $0 may be a link
+PRG="$0"
+# Need this for relative symlinks.
+while [ -h "$PRG" ] ; do
     ls=`ls -ld "$PRG"`
     link=`expr "$ls" : '.*-> \(.*\)$'`
     if expr "$link" : '/.*' > /dev/null; then
@@ -19,7 +18,6 @@ PRG="$0"ve symlinks.
     else
         PRG=`dirname "$PRG"`"/$link"
     fi
- shellcheck disable=SC1058
 done
 SAVED="`pwd`"
 cd "`dirname \"$PRG\"`/" >/dev/null
