@@ -28,9 +28,9 @@
                 <TextView
                     android:id="@+id/task1_details"
                     android:layout_width="150dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="101dp"
                     android:layout_gravity="center_horizontal|center_vertical"
-                    android:text="Task 1: Kávézás egy tematikus helyen"
+                    android:text="@string/task1"
                     android:textColor="@color/colorBlack" />
             </FrameLayout>
 
@@ -47,9 +47,9 @@
                 <TextView
                     android:id="@+id/task2_details"
                     android:layout_width="150dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="82dp"
                     android:layout_gravity="center_horizontal|center_vertical"
-                    android:text="Task 2: Függőágyra fel"
+                    android:text="@string/task2"
                     android:textColor="@color/colorBlack" />
             </FrameLayout>
 
@@ -66,34 +66,40 @@
                 <TextView
                     android:id="@+id/task3_details"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="81dp"
                     android:layout_gravity="center_horizontal|center_vertical"
-                    android:text="Task3: Legyél konyhatündér!"
+                    android:text="@string/task3"
                     android:textColor="@color/colorBlack" />
             </FrameLayout>
 
-            <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginBottom="0dp"
-                    android:text="Add new post" />
-        </FrameLayout>
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginLeft="30dp"
-                android:src="@drawable/addpost" />
 
         </LinearLayout>
 
 
-</ScrollView>
+    </ScrollView>
 
 
-    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/addpostbutton"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="5dp"
+        android:text="Add new post" />
+
+    <ImageView
+        android:id="@+id/addpostbutton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginBottom="100dp"
+        android:src="@drawable/addpost" />
+</RelativeLayout>

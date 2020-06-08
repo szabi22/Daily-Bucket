@@ -1,27 +1,26 @@
 package com.example.dailybucket;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.dailybucket.R;
+public class SettingsFragment extends AppCompatActivity {
+    // Array of strings...
+    String[] settingsArray = {"User Settings","Notifications","Help","About",
+            "Language Settings"};
 
-/**
- * Created by Belal on 1/23/2018.
- */
-
-public class SettingsFragment extends Fragment {
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        //just change the fragment_dashboard
-        //with the fragment you want to inflate
-        //like if the class is HomeFragment it should have R.layout.home_fragment
-        //if it is DashboardFragment it should have R.layout.fragment_dashboard
-        return inflater.inflate(R.layout.fragment_settings, null);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.settings_activity);
+
+        ArrayAdapter adapter = new ArrayAdapter<String>(this,
+                R.layout.listview_settings, settingsArray);
+
+        ListView listView = (ListView) findViewById(R.id.settings);
+        listView.setAdapter(adapter);
     }
+
 }

@@ -36,4 +36,8 @@
     <string name="add_decription">Decription</string>
     <string name="add_photo_new_post">Add photo</string>
     <string name="task_new_post">Task</string>
+    <string name="filters">Filters</string>
+    <string name="task3">Legyél konyhatündér!</string>
+    <string name="task2">Függőágyra fel</string>
+    <string name="task1">Kávézás egy tematikus helyen</string>
 </resources>
